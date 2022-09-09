@@ -1,0 +1,21 @@
+ol{
+    color:rgb(156, 53, 53);
+    font-size:larger;
+}
+ul{
+    color:rgb(156, 42, 42);
+    font-size:large;
+}
+#sele1{
+    color:crimson;
+    background-color: antiquewhite;
+}
+.sele2{
+    color:blue;
+    background-color: bisque;
+}
+h4,h5{
+    color:darkblue;
+    text-align:left;
+    background-color: aliceblue;
+}

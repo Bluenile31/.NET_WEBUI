@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tak 3</title>
+</head>
+<body>
+    <script>
+        
+        var a=5, b=32,c=0;
+        if(a%2==0)
+        {
+            alert("the number is even");
+        }
+        else
+        {
+            alert("the number is odd");
+        }
+        
+    </script>
+    <script>
+        var x=23,y=54,z=0;
+        z=x;
+        x=y;
+        y=z;
+        document.write("a=23,b=54"+ "<br>");
+        document.write("Swapping With temp vairable: " + "<br>");
+        document.write("after swapping a is " + x + " and b is " + y + "<br>");
+
+
+    </script><br><hr>
+    <script>
+        var p=44,q=90;
+        p=p+q;
+        q=p-q;
+        p=p-q;
+        document.write("p=44,q=90"+ "<br>");
+        document.write("Swapping Without temp vairable: " + "<br>");
+        document.write("after swapping a is " + p + " and b is " + q + "<br>");
+    </script><hr>
+    <script>
+        var eng=55,mat=90,sci=76,kan=84,ss=56;
+        var total=eng+mat+sci+kan+ss;
+        document.write("The total marks is "+ total + "<br>");
+        var avg=total/5;
+        document.write("The average marks is "+ avg + "<br>");
+        if(avg>80)
+        {
+            document.write("A Grade");
+        }
+        else if((avg>60)&&(avg<=80))
+        {
+            document.write("B Grade");
+        }
+        else if((avg>45)&&(avg<=60))
+        {
+            document.write("C Grade");
+        }
+        else
+        {
+            document.write("Fail");
+
+        }
+    </script><br><hr><br>
+    <script>
+        var num="1234",sum=0,i=0,j=0,rev=0;
+        document.write("number is"+ num + "<br>");
+        
+        
+        for(var i=num.length;i>=0;i--)
+        {
+            var rev=num[i];
+            document.write(rev);
+        }
+        document.write("<br>");
+        while(num!=0)
+        {
+            sum=sum+num%10;
+            num=num/10;
+        }
+        for(i=0;i<num.length;i++)
+        {
+            sum=sum+num[i]-48;
+        }
+        
+        document.write(sum);
+
+    </script>
+
+</body>
+</html>
