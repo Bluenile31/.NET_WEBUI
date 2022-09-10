@@ -8,36 +8,47 @@
 </head>
 <body>
     <script>
+        const number = prompt("enter no. ");
+        document.write(number);
+        document.write("<br>");
+        if(number % 2 == 0) {
+            document.write("The number is even.");
+        }
+
+// if the number is odd
+        else {
+            document.write("The number is odd.");
+        }
+        document.write("<br><hr>");
         
-        var a=5, b=32,c=0;
-        if(a%2==0)
-        {
-            alert("the number is even");
-        }
-        else
-        {
-            alert("the number is odd");
-        }
         
     </script>
     <script>
-        var x=23,y=54,z=0;
-        z=x;
+        document.write("Using Temp variable:<br>");
+        var x=prompt("enter x");
+        var y=prompt("enter y");
+        let temp;
+        document.write("before swapping x= "+x+", y= "+y);
+        temp=x;
         x=y;
-        y=z;
-        document.write("a=23,b=54"+ "<br>");
-        document.write("Swapping With temp vairable: " + "<br>");
-        document.write("after swapping a is " + x + " and b is " + y + "<br>");
+        y=temp;
+        
+        document.write("<br>after swapping x is " + x + " and y is " + y + "<br>");
+        document.write("<br><hr>");
+       
+        
 
 
-    </script><br><hr>
+    </script><br>
     <script>
-        var p=44,q=90;
+        var p=prompt("enter p");
+        var q=prompt("enter q");
+        document.write("Without Using Temp variable:<br>");
         p=p+q;
         q=p-q;
         p=p-q;
-        document.write("p=44,q=90"+ "<br>");
-        document.write("Swapping Without temp vairable: " + "<br>");
+        document.write("p= "+p+ " q= "+q+ "<br>");
+        
         document.write("after swapping a is " + p + " and b is " + q + "<br>");
     </script><hr>
     <script>
@@ -65,28 +76,27 @@
         }
     </script><br><hr><br>
     <script>
-        var num="1234",sum=0,i=0,j=0,rev=0;
-        document.write("number is"+ num + "<br>");
-        
-        
-        for(var i=num.length;i>=0;i--)
-        {
-            var rev=num[i];
-            document.write(rev);
+        const str = prompt('enter no');
+        document.write('The original string is: ' + str+"<br");
+        let reversedStr = '';
+        for (let i = str.length - 1; i >= 0; i--) {
+            reversedStr += str[i];
         }
-        document.write("<br>");
-        while(num!=0)
-        {
-            sum=sum+num%10;
-            num=num/10;
-        }
-        for(i=0;i<num.length;i++)
-        {
-            sum=sum+num[i]-48;
-        }
-        
-        document.write(sum);
 
+        document.write('The reversed string is: ' + reversedStr+"<br>");
+        
+    </script>
+    <script>
+        document.write("<br><hr>")
+        const num1 =prompt("Enter a positive integer: ");
+        
+        let fact = 1;
+        for (let i = 1; i <= num1; i++) {
+                fact =fact* i;
+            }
+            
+        
+        document.write("The factorial of "+ num1 + " is "+fact);
     </script>
 
 </body>
