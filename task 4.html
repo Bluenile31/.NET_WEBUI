@@ -10,7 +10,7 @@ Body {
 }  
 button {   
        background-color:blue;   
-       width: 100%;  
+       width: 60%;  
         color:white;   
         padding: 15px;   
         margin: 10px 0px;   
@@ -21,13 +21,21 @@ button {
         border: 3px solid;   
     }   
  input[type=text], input[type=password] {   
-        width: 100%;   
+        width: 60%;   
         margin: 8px 0;  
         padding: 12px 20px;   
         display: inline-block;   
         border: 2px solid;   
         box-sizing: border-box;   
     }  
+    input[type=email], input[type=email] {   
+        width: 60%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid;   
+        box-sizing: border-box; 
+    }
  button:hover {   
         opacity: 0.7;   
     }   
@@ -41,37 +49,26 @@ button {
 </style>   
 <script type="text/javascript">
 
-    function login() {
+    function login(email,pwd) {
 
         var email = document.getElementById("n1").value;
         var pwd = document.getElementById("n2").value;
 
-        if (email == '') {
-            document.getElementById("email").innerHTML = "Enter Email Id";
-            var error = document.getElementById("n1");
-            error.style.borderStyle = 'solid';
-            error.style.borderColor = 'red';  
+        if (email == "nileshhosure47@gmail.com"&& pwd=="abcdef") {
+            alert("login successful");
+             
         }
 
-        else if (!filter.test(email)) {
-            document.getElementById("email").innerHTML = "Invalid email id";
-        }
-        else if (pwd == '') {
-            document.getElementById("pass").innerHTML = "Enter Password";
-            var error = document.getElementById("n2");
-            error.style.borderStyle = 'solid';
-            error.style.borderColor = 'red';
+        
+        else if (email == "nileshhosure47@gmail.com"&&pwd == '') {
+            console.log("enter password");
+        
         }
         else {
             var error = document.getElementById("n1");
-            error.style.borderStyle = 'solid';
-            error.style.borderColor = 'green';
-            var error1 = document.getElementById("t2");
-            error1.style.borderStyle = 'solid';
-            error1.style.borderColor = 'green';
             document.getElementById("email").innerHTML = "";
             document.getElementById("pass").innerHTML = "";
-            document.getElementById("register").innerHTML = "Registration Successful";
+            document.getElementById("login").innerHTML = "Registration Successful";
             
         }
     }
@@ -80,15 +77,15 @@ button {
 <body>    
     <center> <h1> Login Form </h1> </center>   
     <form>  
-        <div class="container">   
-            <label>E-mail : </label>   
-            <input type="text" placeholder="Enter E-mail" id="n1" name="username" required >  
-            <label>Password : </label>   
+        <div class="container"> 
+            <label>E-mail : </label> <br>  
+            <input type="email" placeholder="Enter E-mail" id="n1" name="email" required > <br>
+            <label>Password : </label>   <br>
             <input type="password" placeholder="Enter Password" id="n2" name="password" required>  
                 
-            <button type="submit" value="Login" onclick="login()" >Login</button>
-            
-        </div>   
+            <button type="submit" value="Login" onclick="login(email,password)" >Login</button>
+        </div>    
+          
     </form>     
 </body>     
 </html>  
